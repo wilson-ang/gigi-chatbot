@@ -8,7 +8,7 @@ const updatePlaceholder = (e) => {
   let t = setInterval(() => {
     try {
       let e = document.querySelectorAll("input"),
-        i = document.querySelector(".search-content");
+        i = document.querySelector(".md-listing-search");
       if (!e) return;
       updatePlaceholder(e),
         new MutationObserver((t, i) => {
