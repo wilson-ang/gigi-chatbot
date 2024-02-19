@@ -47,20 +47,19 @@
   let e = 0,
     r = setInterval(() => {
       try {
-        let t = Array.from(
-          document.querySelectorAll(
-            "div.nav-container > ul.head-menu > li:nth-child(6)"
-          )
-        ).filter((e) => !e.classList.contains("inj"));
+        let t = Array.from(document.querySelectorAll("li.menu-item")).filter(
+          (e) => !e.classList.contains("inj")
+        );
         for (let i of ((e += 50) >= 1e4 && clearInterval(r), t)) {
           i.classList.add("inj");
           let n = i.querySelector("a");
-          n && (n.href = `tel:+14243325556`),
+          n && n.href === "/tel:+14243325556" && (n.href = `tel:+14243325556`),
             new MutationObserver((e, r) => {
               for (let t of e)
                 if ("childList" === t.type) {
-                  let n = i.querySelector(".a");
+                  let n = i.querySelector("a");
                   n &&
+                    n.href === "/tel:+14243325556" &&
                     !n.classList.contains("edited") &&
                     (n.classList.add("edited"), (n.href = `tel:+14243325556`));
                 }
