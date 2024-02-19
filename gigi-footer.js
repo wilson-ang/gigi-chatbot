@@ -53,13 +53,15 @@
         for (let i of ((e += 50) >= 1e4 && clearInterval(r), t)) {
           i.classList.add("inj");
           let n = i.querySelector("a");
-          n && n.href === "/tel:+14243325556" && (n.href = `tel:+14243325556`),
+          n &&
+            n.href.includes("/tel:+14243325556") &&
+            (n.href = `tel:+14243325556`),
             new MutationObserver((e, r) => {
               for (let t of e)
                 if ("childList" === t.type) {
                   let n = i.querySelector("a");
                   n &&
-                    n.href === "/tel:+14243325556" &&
+                    n.href.includes("/tel:+14243325556") &&
                     !n.classList.contains("edited") &&
                     (n.classList.add("edited"), (n.href = `tel:+14243325556`));
                 }
