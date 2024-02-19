@@ -49,7 +49,7 @@
       try {
         let t = Array.from(
           document.querySelectorAll(
-            "div.nav-container > ul.head-menu > li:nth-child(1)"
+            "div.nav-container > ul.head-menu > li:nth-child(6)"
           )
         ).filter((e) => !e.classList.contains("inj"));
         for (let i of ((e += 50) >= 1e4 && clearInterval(r), t)) {
